@@ -229,6 +229,111 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/17/最小生成树/" itemprop="url">
+                  最小生成树
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-05-17T13:38:24+08:00" content="2016-05-17">
+              2016-05-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/漫漫长路/" itemprop="url" rel="index">
+                    <span itemprop="name">漫漫长路</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/17/最小生成树/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/17/最小生成树/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>首先如何定义最小生成树<br>最小生成树（MST）：权值最小的生成树。<br>有两种算法<br>1,普里姆算法(prim)<br>2,克鲁斯卡尔(kruskal)</p>
+<p>最小生成树，比如有N个结点，那么则有N-1根生成线。<br>根据我的理解 来区分一下这两种算法的思路区别。<br>拿下面一题进行解读</p>
+<p><b>prim算法</b><br>核心思路就是最优解，选取最小的数值进行下一步连接<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073015154494.png" alt=""><br>求图的最小生成树。首先根据prim算法，我们先从A点出发。A-&gt;D=5,A-&gt;B=7.5的优先级大于7.选择A-&gt;D线路。<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073015175038.png" alt=""><br>接着从D点出发 进行判断 D-&gt;B=9,D-&gt;F=6,D-&gt;E=15. 我们选择F点。路线A-&gt;D-&gt;F.<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016130394.png" alt=""><br>然后A-&gt;D-&gt;F,接下来判断F-&gt;G=11,F-&gt;E=8,A-&gt;B=7.因为7的优先级最高。选择A-&gt;D-&gt;F,A-&gt;B.<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016143177.png" alt=""><br>下面继续判断 因为F-&gt;G=11,F-&gt;E=8，B-&gt;C=8,B-&gt;E=7.7的优先级最高。选择A-&gt;D-&gt;F,A-&gt;B-&gt;E.<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016154616.png" alt=""><br>下面继续判断 F-&gt;G=11,F-&gt;E=8，E-&gt;G=9,E-&gt;C=5. 5的优先级最高。选择A-&gt;D-&gt;F,A-&gt;B-&gt;E-&gt;C.<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016100874.png" alt=""><br>省略一步（）A-&gt;D-&gt;F-&gt;G,A-&gt;B-&gt;E-&gt;C.<br>求出最小生成树 为 mst=5+6+7+7+5+9=39</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/17/二叉树遍历/" itemprop="url">
                   二叉树遍历
                 </a>
@@ -725,111 +830,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/21/Snow/" itemprop="url">
-                  Snow
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-21T09:45:48+08:00" content="2016-01-21">
-              2016-01-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/生活琐事/" itemprop="url" rel="index">
-                    <span itemprop="name">生活琐事</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/21/Snow/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/21/Snow/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p><blockquote class="blockquote-center"><br>You know nothing Jon Snow<br></blockquote><br><img src="https://img.alicdn.com/imgextra/i4/86581282/TB29OmwjVXXXXXkXXXXXXXXXXXX_!!86581282.gif" alt="Snow"></p>
-<p>昨天媳妇这样跟我说到，英文比较差，就听懂了Snow。</p>
-<p>于是乎今早就开始下雪了。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/21/Snow/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -876,7 +876,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

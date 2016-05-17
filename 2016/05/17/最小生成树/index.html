@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="电影," />
+  <meta name="keywords" content="数据结构," />
 
 
 
@@ -51,18 +51,28 @@
 
 
 
-<meta name="description" content="There are no accidents 世间无巧合附上媳妇照片一张">
+<meta name="description" content="首先如何定义最小生成树最小生成树（MST）：权值最小的生成树。有两种算法1,普里姆算法(prim)2,克鲁斯卡尔(kruskal)
+最小生成树，比如有N个结点，那么则有N-1根生成线。根据我的理解 来区分一下这两种算法的思路区别。拿下面一题进行解读
+prim算法核心思路就是最优解，选取最小的数值进行下一步连接求图的最小生成树。首先根据prim算法，我们先从A点出发。A-&amp;gt;D=5,A-&amp;gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="功夫熊猫3">
-<meta property="og:url" content="http://tomsha.sinaapp.com/2016/02/01/功夫熊猫3/index.html">
+<meta property="og:title" content="最小生成树">
+<meta property="og:url" content="http://tomsha.sinaapp.com/2016/05/17/最小生成树/index.html">
 <meta property="og:site_name" content="二月の半">
-<meta property="og:description" content="There are no accidents 世间无巧合附上媳妇照片一张">
-<meta property="og:image" content="https://img.alicdn.com/imgextra/i1/86581282/TB2bVNRkXXXXXc6XXXXXXXXXXXX_!!86581282.jpg">
-<meta property="og:image" content="https://img.alicdn.com/imgextra/i4/86581282/TB2h3OXkXXXXXadXXXXXXXXXXXX_!!86581282.jpg_620x10000.jpg">
-<meta property="og:updated_time" content="2016-02-01T07:57:11.243Z">
+<meta property="og:description" content="首先如何定义最小生成树最小生成树（MST）：权值最小的生成树。有两种算法1,普里姆算法(prim)2,克鲁斯卡尔(kruskal)
+最小生成树，比如有N个结点，那么则有N-1根生成线。根据我的理解 来区分一下这两种算法的思路区别。拿下面一题进行解读
+prim算法核心思路就是最优解，选取最小的数值进行下一步连接求图的最小生成树。首先根据prim算法，我们先从A点出发。A-&amp;gt;D=5,A-&amp;gt;">
+<meta property="og:image" content="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073015154494.png">
+<meta property="og:image" content="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073015175038.png">
+<meta property="og:image" content="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016130394.png">
+<meta property="og:image" content="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016143177.png">
+<meta property="og:image" content="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016154616.png">
+<meta property="og:image" content="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016100874.png">
+<meta property="og:updated_time" content="2016-05-17T06:55:48.749Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="功夫熊猫3">
-<meta name="twitter:description" content="There are no accidents 世间无巧合附上媳妇照片一张">
+<meta name="twitter:title" content="最小生成树">
+<meta name="twitter:description" content="首先如何定义最小生成树最小生成树（MST）：权值最小的生成树。有两种算法1,普里姆算法(prim)2,克鲁斯卡尔(kruskal)
+最小生成树，比如有N个结点，那么则有N-1根生成线。根据我的理解 来区分一下这两种算法的思路区别。拿下面一题进行解读
+prim算法核心思路就是最优解，选取最小的数值进行下一步连接求图的最小生成树。首先根据prim算法，我们先从A点出发。A-&amp;gt;D=5,A-&amp;gt;">
 
 
 
@@ -74,7 +84,7 @@
   };
 </script>
 
-  <title> 功夫熊猫3 | 二月の半 </title>
+  <title> 最小生成树 | 二月の半 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -214,7 +224,7 @@
             
             
               
-                功夫熊猫3
+                最小生成树
               
             
           </h1>
@@ -223,8 +233,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-01T13:18:28+08:00" content="2016-02-01">
-              2016-02-01
+            <time itemprop="dateCreated" datetime="2016-05-17T13:38:24+08:00" content="2016-05-17">
+              2016-05-17
             </time>
           </span>
 
@@ -233,8 +243,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/生活琐事/" itemprop="url" rel="index">
-                    <span itemprop="name">生活琐事</span>
+                  <a href="/categories/漫漫长路/" itemprop="url" rel="index">
+                    <span itemprop="name">漫漫长路</span>
                   </a>
                 </span>
 
@@ -249,8 +259,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/01/功夫熊猫3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/01/功夫熊猫3/" itemprop="commentsCount"></span>
+                <a href="/2016/05/17/最小生成树/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/17/最小生成树/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -269,7 +279,9 @@
       
 
       
-        <span itemprop="articleBody"><p><blockquote class="blockquote-center"><br>There are no accidents 世间无巧合<br></blockquote><br><img src="https://img.alicdn.com/imgextra/i1/86581282/TB2bVNRkXXXXXc6XXXXXXXXXXXX_!!86581282.jpg" alt="熊猫"><br>附上媳妇照片一张<br><a id="more"></a><br>应媳妇要求打上马赛克<br><img src="https://img.alicdn.com/imgextra/i4/86581282/TB2h3OXkXXXXXadXXXXXXXXXXXX_!!86581282.jpg_620x10000.jpg" alt=""></p>
+        <span itemprop="articleBody"><p>首先如何定义最小生成树<br>最小生成树（MST）：权值最小的生成树。<br>有两种算法<br>1,普里姆算法(prim)<br>2,克鲁斯卡尔(kruskal)</p>
+<p>最小生成树，比如有N个结点，那么则有N-1根生成线。<br>根据我的理解 来区分一下这两种算法的思路区别。<br>拿下面一题进行解读</p>
+<p><b>prim算法</b><br>核心思路就是最优解，选取最小的数值进行下一步连接<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073015154494.png" alt=""><br>求图的最小生成树。首先根据prim算法，我们先从A点出发。A-&gt;D=5,A-&gt;B=7.5的优先级大于7.选择A-&gt;D线路。<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073015175038.png" alt=""><br>接着从D点出发 进行判断 D-&gt;B=9,D-&gt;F=6,D-&gt;E=15. 我们选择F点。路线A-&gt;D-&gt;F.<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016130394.png" alt=""><br>然后A-&gt;D-&gt;F,接下来判断F-&gt;G=11,F-&gt;E=8,A-&gt;B=7.因为7的优先级最高。选择A-&gt;D-&gt;F,A-&gt;B.<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016143177.png" alt=""><br>下面继续判断 因为F-&gt;G=11,F-&gt;E=8，B-&gt;C=8,B-&gt;E=7.7的优先级最高。选择A-&gt;D-&gt;F,A-&gt;B-&gt;E.<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016154616.png" alt=""><br>下面继续判断 F-&gt;G=11,F-&gt;E=8，E-&gt;G=9,E-&gt;C=5. 5的优先级最高。选择A-&gt;D-&gt;F,A-&gt;B-&gt;E-&gt;C.<br><img src="http://tomsha-photo.stor.sinaapp.com/%E6%BC%AB%E6%BC%AB%E9%95%BF%E8%B7%AF%2F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%2F%E6%99%AE%E9%87%8C%E5%A7%86%E7%AE%97%E6%B3%95%2F2012073016100874.png" alt=""><br>省略一步（）A-&gt;D-&gt;F-&gt;G,A-&gt;B-&gt;E-&gt;C.<br>求出最小生成树 为 mst=5+6+7+7+5+9=39</p>
 </span>
       
     </div>
@@ -278,7 +290,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/电影/" rel="tag">#电影</a>
+            <a href="/tags/数据结构/" rel="tag">#数据结构</a>
           
         </div>
       
@@ -287,17 +299,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/21/Snow/" rel="next" title="Snow">
-                <i class="fa fa-chevron-left"></i> Snow
+              <a href="/2016/05/17/二叉树遍历/" rel="next" title="二叉树遍历">
+                <i class="fa fa-chevron-left"></i> 二叉树遍历
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/16/春节菇凉/" rel="prev" title="春节菇凉">
-                春节菇凉 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -324,8 +332,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/01/功夫熊猫3/"
-           data-title="功夫熊猫3" data-url="http://tomsha.sinaapp.com/2016/02/01/功夫熊猫3/">
+      <div class="ds-thread" data-thread-key="2016/05/17/最小生成树/"
+           data-title="最小生成树" data-url="http://tomsha.sinaapp.com/2016/05/17/最小生成树/">
       </div>
     
   </div>
